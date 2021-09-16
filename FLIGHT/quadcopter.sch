@@ -1,0 +1,153 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Ark:ESP32WROVER_SG U?
+U 1 1 61319C5C
+P 1750 2600
+F 0 "U?" H 1850 4047 50  0000 C CNN
+F 1 "ESP32WROVER_SG" H 1850 3956 50  0000 C CNN
+F 2 "Ark:ESP32WROVER_SG" H 1250 3550 50  0001 C CNN
+F 3 "" H 1250 3550 50  0001 C CNN
+F 4 "Espressif Systems" H 1850 3865 50  0000 C CNN "Manufacturer_Name"
+F 5 "ESP32-WROVER-B(M213DH3264PH3Q0)" H 1850 3774 50  0000 C CNN "Manufacturer_Part_Number"
+	1    1750 2600
+	1    0    0    -1  
+$EndComp
+Wire Notes Line
+	900  950  4900 950 
+Wire Notes Line
+	4900 4750 900  4750
+Wire Notes Line
+	900  4750 900  950 
+Text Notes 900  900  0    50   ~ 0
+Microcontroller\n
+Wire Notes Line
+	4900 950  4900 4750
+$Comp
+L power:GND #PWR?
+U 1 1 61469FB2
+P 2650 1850
+F 0 "#PWR?" H 2650 1600 50  0001 C CNN
+F 1 "GND" H 2655 1677 50  0000 C CNN
+F 2 "" H 2650 1850 50  0001 C CNN
+F 3 "" H 2650 1850 50  0001 C CNN
+	1    2650 1850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2450 1750 2650 1750
+Wire Wire Line
+	2650 1750 2650 1850
+$Comp
+L power:+3.3V #PWR?
+U 1 1 6146BE62
+P 1050 1750
+F 0 "#PWR?" H 1050 1600 50  0001 C CNN
+F 1 "+3.3V" H 1065 1923 50  0000 C CNN
+F 2 "" H 1050 1750 50  0001 C CNN
+F 3 "" H 1050 1750 50  0001 C CNN
+	1    1050 1750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1250 1850 1050 1850
+Wire Wire Line
+	1050 1850 1050 1750
+$Comp
+L power:GND #PWR?
+U 1 1 6147B230
+P 3900 4350
+F 0 "#PWR?" H 3900 4100 50  0001 C CNN
+F 1 "GND" H 3905 4177 50  0000 C CNN
+F 2 "" H 3900 4350 50  0001 C CNN
+F 3 "" H 3900 4350 50  0001 C CNN
+	1    3900 4350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR?
+U 1 1 61493977
+P 2750 3350
+F 0 "#PWR?" H 2750 3200 50  0001 C CNN
+F 1 "+3.3V" H 2765 3523 50  0000 C CNN
+F 2 "" H 2750 3350 50  0001 C CNN
+F 3 "" H 2750 3350 50  0001 C CNN
+	1    2750 3350
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	2850 3350 2750 3350
+Wire Wire Line
+	2450 3250 2850 3250
+Wire Wire Line
+	2450 3150 2850 3150
+$Comp
+L Device:C_Small C1
+U 1 1 614B4599
+P 3900 4250
+F 0 "C1" H 3992 4296 50  0000 L CNN
+F 1 "0.1uF" H 3992 4205 50  0000 L CNN
+F 2 "" H 3900 4250 50  0001 C CNN
+F 3 "~" H 3900 4250 50  0001 C CNN
+	1    3900 4250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Sensor_Motion:MPU-6050 U1
+U 1 1 61451934
+P 3550 3450
+F 0 "U1" H 3550 2661 50  0000 C CNN
+F 1 "MPU-6050" H 3550 2570 50  0000 C CNN
+F 2 "Sensor_Motion:InvenSense_QFN-24_4x4mm_P0.5mm" H 3550 2650 50  0001 C CNN
+F 3 "https://store.invensense.com/datasheets/invensense/MPU-6050_DataSheet_V3%204.pdf" H 3550 3300 50  0001 C CNN
+	1    3550 3450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3550 4150 3900 4150
+$Comp
+L Device:C_Small C2
+U 1 1 614D583B
+P 3850 2650
+F 0 "C2" H 3942 2696 50  0000 L CNN
+F 1 "0.1uf" H 3942 2605 50  0000 L CNN
+F 2 "" H 3850 2650 50  0001 C CNN
+F 3 "~" H 3850 2650 50  0001 C CNN
+	1    3850 2650
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 614E2A80
+P 2850 4350
+F 0 "#PWR?" H 2850 4100 50  0001 C CNN
+F 1 "GND" H 2855 4177 50  0000 C CNN
+F 2 "" H 2850 4350 50  0001 C CNN
+F 3 "" H 2850 4350 50  0001 C CNN
+	1    2850 4350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2850 3750 2850 4350
+Wire Wire Line
+	2450 3050 2950 3050
+Wire Wire Line
+	2950 3050 2950 2400
+Wire Wire Line
+	2950 2400 4250 2400
+Wire Wire Line
+	4250 2400 4250 3150
+$EndSCHEMATC

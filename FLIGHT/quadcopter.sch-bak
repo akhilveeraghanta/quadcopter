@@ -1,0 +1,107 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 2
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Ark:ESP32WROVER_SG U?
+U 1 1 61319C5C
+P 2350 2950
+F 0 "U?" H 2450 4397 50  0000 C CNN
+F 1 "ESP32WROVER_SG" H 2450 4306 50  0000 C CNN
+F 2 "Ark:ESP32WROVER_SG" H 1850 3900 50  0001 C CNN
+F 3 "" H 1850 3900 50  0001 C CNN
+F 4 "Espressif Systems" H 2450 4215 50  0000 C CNN "Manufacturer_Name"
+F 5 "ESP32-WROVER-B(M213DH3264PH3Q0)" H 2450 4124 50  0000 C CNN "Manufacturer_Part_Number"
+	1    2350 2950
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 6133E9BA
+P 4350 3850
+F 0 "#PWR?" H 4350 3600 50  0001 C CNN
+F 1 "GND" H 4355 3677 50  0000 C CNN
+F 2 "" H 4350 3850 50  0001 C CNN
+F 3 "" H 4350 3850 50  0001 C CNN
+	1    4350 3850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4350 3850 4350 3500
+Wire Wire Line
+	4350 3500 4100 3500
+Wire Wire Line
+	4350 3500 4350 3400
+Wire Wire Line
+	4350 3400 4100 3400
+Connection ~ 4350 3500
+Wire Wire Line
+	4350 3400 4350 3300
+Wire Wire Line
+	4350 3300 4100 3300
+Connection ~ 4350 3400
+$Comp
+L SamacSys:KRTBLSLPS1.32-VUVX-EQ+BTBV-D8+TWTZ-L1-B LED?
+U 1 1 613278C7
+P 3200 3300
+F 0 "LED?" H 3650 3565 50  0000 C CNN
+F 1 "RGB" H 3650 3474 50  0000 C CNN
+F 2 "KRTBLSLPS132VUVXEQBTBVD8TWTZL1B" H 3950 3400 50  0001 L CNN
+F 3 "https://dammedia.osram.info/media/resource/hires/osram-dam-6176296/KRTB%20LSLPS1.32_EN.pdf" H 3950 3300 50  0001 L CNN
+F 4 "LED RGB 6LED 6PLCC SMD" H 3950 3200 50  0001 L CNN "Description"
+F 5 "2.04" H 3950 3100 50  0001 L CNN "Height"
+F 6 "720-KRTBLSLPS13A0062" H 3950 3000 50  0001 L CNN "Mouser Part Number"
+F 7 "https://www.mouser.co.uk/ProductDetail/OSRAM-Opto-Semiconductors/KRTBLSLPS132-VUVX-EQ%2bBTBV-D8%2bTWTZ-L1-B/?qs=OlC7AqGiEDms9aB20KQuCA%3D%3D" H 3950 2900 50  0001 L CNN "Mouser Price/Stock"
+F 8 "OSRAM" H 3950 2800 50  0001 L CNN "Manufacturer_Name"
+F 9 "KRTBLSLPS1.32-VUVX-EQ+BTBV-D8+TWTZ-L1-B" H 3950 2700 50  0001 L CNN "Manufacturer_Part_Number"
+	1    3200 3300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3200 3300 3050 3300
+Wire Wire Line
+	3050 3400 3200 3400
+Wire Wire Line
+	3050 3500 3200 3500
+Wire Notes Line
+	900  950  4900 950 
+Wire Notes Line
+	4900 4750 900  4750
+Wire Notes Line
+	900  4750 900  950 
+Text Notes 900  900  0    50   ~ 0
+Microcontroller\n
+Text GLabel 3050 3700 2    50   Input ~ 0
+sda
+Text GLabel 3050 3800 2    50   Input ~ 0
+scl
+Wire Wire Line
+	4800 4100 5000 4100
+Wire Wire Line
+	4800 4250 5000 4250
+Text GLabel 4800 4250 0    50   Input ~ 0
+scl
+Text GLabel 4800 4100 0    50   Input ~ 0
+sda
+$Sheet
+S 5000 3950 1000 600 
+U 6137D3D9
+F0 "voltage_regular" 50
+F1 "voltage_regular.sch" 50
+F2 "sda" I L 5000 4100 50 
+F3 "scl" I L 5000 4250 50 
+$EndSheet
+Wire Notes Line
+	4900 950  4900 4750
+$EndSCHEMATC
