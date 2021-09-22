@@ -98,23 +98,18 @@ Connection ~ 2300 1250
 $Comp
 L power:-BATT #PWR?
 U 1 1 614263A0
-P 1450 2650
-F 0 "#PWR?" H 1450 2500 50  0001 C CNN
-F 1 "-BATT" H 1465 2823 50  0000 C CNN
-F 2 "" H 1450 2650 50  0001 C CNN
-F 3 "" H 1450 2650 50  0001 C CNN
-	1    1450 2650
-	1    0    0    -1  
+P 1550 2650
+F 0 "#PWR?" H 1550 2500 50  0001 C CNN
+F 1 "-BATT" H 1565 2823 50  0000 C CNN
+F 2 "" H 1550 2650 50  0001 C CNN
+F 3 "" H 1550 2650 50  0001 C CNN
+	1    1550 2650
+	-1   0    0    1   
 $EndComp
-Wire Wire Line
-	1450 2650 1450 2750
-Wire Wire Line
-	1450 2750 2300 2750
 Wire Wire Line
 	2300 2750 2300 2650
 Wire Wire Line
 	2300 2750 3500 2750
-Connection ~ 2300 2750
 Wire Wire Line
 	2300 1600 2300 1750
 Wire Wire Line
@@ -126,8 +121,8 @@ Wire Wire Line
 	2300 2250 2300 2100
 Wire Wire Line
 	2300 1250 2300 1400
-Text GLabel 1900 2150 0    50   Input ~ 0
-A_Gate
+Text GLabel 3050 2150 0    50   Input ~ 0
+A_Gate_low
 Wire Wire Line
 	1950 2450 2000 2450
 Wire Wire Line
@@ -218,26 +213,10 @@ Wire Wire Line
 Wire Wire Line
 	5550 1250 6750 1250
 Connection ~ 5550 1250
-$Comp
-L power:-BATT #PWR?
-U 1 1 61472B18
-P 4700 2650
-F 0 "#PWR?" H 4700 2500 50  0001 C CNN
-F 1 "-BATT" H 4715 2823 50  0000 C CNN
-F 2 "" H 4700 2650 50  0001 C CNN
-F 3 "" H 4700 2650 50  0001 C CNN
-	1    4700 2650
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	4700 2650 4700 2750
-Wire Wire Line
-	4700 2750 5550 2750
 Wire Wire Line
 	5550 2750 5550 2650
 Wire Wire Line
 	5550 2750 6750 2750
-Connection ~ 5550 2750
 Wire Wire Line
 	5550 1600 5550 1750
 Wire Wire Line
@@ -249,8 +228,6 @@ Wire Wire Line
 	5550 2250 5550 2100
 Wire Wire Line
 	5550 1250 5550 1400
-Text GLabel 5150 2150 0    50   Input ~ 0
-B_Gate
 Wire Wire Line
 	5200 2450 5250 2450
 Wire Wire Line
@@ -341,26 +318,10 @@ Wire Wire Line
 Wire Wire Line
 	8850 1250 10050 1250
 Connection ~ 8850 1250
-$Comp
-L power:-BATT #PWR?
-U 1 1 61475615
-P 8000 2650
-F 0 "#PWR?" H 8000 2500 50  0001 C CNN
-F 1 "-BATT" H 8015 2823 50  0000 C CNN
-F 2 "" H 8000 2650 50  0001 C CNN
-F 3 "" H 8000 2650 50  0001 C CNN
-	1    8000 2650
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	8000 2650 8000 2750
-Wire Wire Line
-	8000 2750 8850 2750
 Wire Wire Line
 	8850 2750 8850 2650
 Wire Wire Line
 	8850 2750 10050 2750
-Connection ~ 8850 2750
 Wire Wire Line
 	8850 1600 8850 1750
 Wire Wire Line
@@ -372,8 +333,6 @@ Wire Wire Line
 	8850 2250 8850 2100
 Wire Wire Line
 	8850 1250 8850 1400
-Text GLabel 8450 2150 0    50   Input ~ 0
-C_Gate
 Wire Wire Line
 	8500 2450 8550 2450
 Wire Wire Line
@@ -586,7 +545,7 @@ B
 Wire Wire Line
 	4450 4050 4550 4050
 Text GLabel 5550 4050 2    50   Input ~ 0
-B
+C
 Wire Wire Line
 	5550 4050 5450 4050
 Text GLabel 5000 4200 3    50   Input ~ 0
@@ -665,22 +624,151 @@ Power Conn
 $Comp
 L Connector:Conn_01x05_Male J?
 U 1 1 615E4E40
-P 9100 5300
-F 0 "J?" H 9200 5600 50  0000 C CNN
-F 1 "JTAG" H 9200 4950 50  0000 C CNN
-F 2 "" H 9100 5300 50  0001 C CNN
-F 3 "~" H 9100 5300 50  0001 C CNN
-	1    9100 5300
+P 9500 5300
+F 0 "J?" H 9600 5600 50  0000 C CNN
+F 1 "JTAG" H 9600 4950 50  0000 C CNN
+F 2 "" H 9500 5300 50  0001 C CNN
+F 3 "~" H 9500 5300 50  0001 C CNN
+	1    9500 5300
 	-1   0    0    1   
 $EndComp
 Wire Notes Line
-	9250 5750 8400 5750
+	9650 5750 8800 5750
 Wire Notes Line
-	8400 5750 8400 4800
+	8800 5750 8800 4800
 Wire Notes Line
-	8400 4800 9250 4800
+	8800 4800 9650 4800
 Wire Notes Line
-	9250 4800 9250 5750
-Text Notes 8400 4750 0    50   ~ 0
+	9650 4800 9650 5750
+Text Notes 8800 4750 0    50   ~ 0
 JTAG
+$Comp
+L Connector_Generic:Conn_01x03 J?
+U 1 1 6148104F
+P 8200 5050
+F 0 "J?" H 8280 5092 50  0000 L CNN
+F 1 "Motor" H 8280 5001 50  0000 L CNN
+F 2 "" H 8200 5050 50  0001 C CNN
+F 3 "~" H 8200 5050 50  0001 C CNN
+	1    8200 5050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x03 J?
+U 1 1 61481DF4
+P 6900 5050
+F 0 "J?" H 6980 5092 50  0000 L CNN
+F 1 "MainBoard" H 6980 5001 50  0000 L CNN
+F 2 "" H 6900 5050 50  0001 C CNN
+F 3 "~" H 6900 5050 50  0001 C CNN
+	1    6900 5050
+	1    0    0    -1  
+$EndComp
+Text GLabel 1900 2150 0    50   Input ~ 0
+A_Gate_High
+Wire Wire Line
+	3200 2450 3100 2450
+Wire Wire Line
+	3100 2450 3100 2150
+Wire Wire Line
+	3100 2150 3050 2150
+Text GLabel 6300 2150 0    50   Input ~ 0
+B_Gate_low
+Text GLabel 5150 2150 0    50   Input ~ 0
+B_Gate_High
+Wire Wire Line
+	6450 2450 6350 2450
+Wire Wire Line
+	6350 2450 6350 2150
+Wire Wire Line
+	6350 2150 6300 2150
+Text GLabel 9600 2150 0    50   Input ~ 0
+C_Gate_low
+Text GLabel 8450 2150 0    50   Input ~ 0
+C_Gate_High
+Wire Wire Line
+	9750 2450 9650 2450
+Wire Wire Line
+	9650 2450 9650 2150
+Wire Wire Line
+	9650 2150 9600 2150
+Wire Wire Line
+	2300 2750 1800 2750
+Connection ~ 2300 2750
+Wire Wire Line
+	1800 2750 1800 2600
+Wire Wire Line
+	1800 2600 1550 2600
+Wire Wire Line
+	1550 2600 1550 2650
+$Comp
+L power:-BATT #PWR?
+U 1 1 6155AC11
+P 4800 2650
+F 0 "#PWR?" H 4800 2500 50  0001 C CNN
+F 1 "-BATT" H 4815 2823 50  0000 C CNN
+F 2 "" H 4800 2650 50  0001 C CNN
+F 3 "" H 4800 2650 50  0001 C CNN
+	1    4800 2650
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	5550 2750 5050 2750
+Wire Wire Line
+	5050 2750 5050 2600
+Wire Wire Line
+	5050 2600 4800 2600
+Wire Wire Line
+	4800 2600 4800 2650
+$Comp
+L power:-BATT #PWR?
+U 1 1 6155D730
+P 8100 2650
+F 0 "#PWR?" H 8100 2500 50  0001 C CNN
+F 1 "-BATT" H 8115 2823 50  0000 C CNN
+F 2 "" H 8100 2650 50  0001 C CNN
+F 3 "" H 8100 2650 50  0001 C CNN
+	1    8100 2650
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	8850 2750 8350 2750
+Wire Wire Line
+	8350 2750 8350 2600
+Wire Wire Line
+	8350 2600 8100 2600
+Wire Wire Line
+	8100 2600 8100 2650
+Text GLabel 7900 5150 0    50   Input ~ 0
+C
+Text GLabel 7900 5050 0    50   Input ~ 0
+B
+Text GLabel 7900 4950 0    50   Input ~ 0
+A
+Wire Wire Line
+	7900 4950 8000 4950
+Wire Wire Line
+	7900 5050 8000 5050
+Wire Wire Line
+	7900 5150 8000 5150
+Wire Notes Line
+	8550 4800 8550 5300
+Wire Notes Line
+	7700 4800 7700 5300
+Wire Notes Line
+	7700 5300 8550 5300
+Wire Notes Line
+	7700 4800 8550 4800
+Wire Notes Line
+	6600 5250 7450 5250
+Wire Notes Line
+	7450 5250 7450 4800
+Wire Notes Line
+	7450 4800 6600 4800
+Wire Notes Line
+	6600 4800 6600 5250
+Text Notes 7700 4750 0    50   ~ 0
+Motor
+Text Notes 6600 4750 0    50   ~ 0
+conn to main board
 $EndSCHEMATC
