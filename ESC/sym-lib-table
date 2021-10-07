@@ -1,0 +1,4 @@
+(sym_lib_table
+  (lib (name Ark)(type Legacy)(uri ${ARK}/kicad_lib/Ark.lib)(options "")(descr ""))
+  (lib (name SamacSys_Parts)(type Legacy)(uri ${ARK}/SamacSys_PVB_Libary/KiCad/SamacSys_Parts.lib)(options "")(descr ""))
+)
